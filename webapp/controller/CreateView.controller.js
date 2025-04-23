@@ -6,6 +6,7 @@ sap.ui.define([
   
     return BaseController.extend("app.miningdata.controller.CreateView", {
         onInit() {
+            // this._getData();
         },
         
         onSubmit:function(){
@@ -57,15 +58,17 @@ sap.ui.define([
                         onClose:function(){
                             let oRouter=that.getRouter()
                             oRouter.navTo("RouteMiningView")
-                            oLocId.setValue("");
-                            oLocDesc.setValue("");
-                            oMinResc.setValue("");
-                            oTotalCost.setValue("");
-                            oCurr.setValue("");
-                            oPosMin.setValue("");
-                            oNumOfDrills.setValue("");
-                            oTypeOfMin.setValue("");
-                            oProbOfMin.setValue("");
+                            oLocId.setValue()
+                            oLocDesc.setValue()
+                            oMinResc.setValue()
+                            oTotalCost.setValue()
+                            oCurr.setValue()
+                            oPosMin.setValue()
+                            oNumOfDrills.setValue()
+                            oTypeOfMin.setValue()
+                            oProbOfMin.setValue()
+                            that._getData()
+        
 
                         }.bind(that)
                     })

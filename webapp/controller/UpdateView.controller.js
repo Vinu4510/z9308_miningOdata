@@ -20,15 +20,15 @@ sap.ui.define([
         onUpdate:function(){
 
             // payload
-            var oLocId=this.getView().byId("idLoc");
-            var oLocDesc=this.getView().byId("idLocDesc");
-            var oMinResc=this.getView().byId("idMinResc");
-            var oTotalCost=this.getView().byId("idTotalCost");
-            var oCurr=this.getView().byId("idCurr");
-            var oPosMin=this.getView().byId("idPosMin");
-            var oNumOfDrills=this.getView().byId("idNumOfDrills");
-            var oTypeOfMin=this.getView().byId("idTypeOfMin");
-            var oProbOfMin=this.getView().byId("idProbOfMin");
+            var oLocId=this.getView().byId("idLocUp");
+            var oLocDesc=this.getView().byId("idLocDescUp");
+            var oMinResc=this.getView().byId("idMinRescUp");
+            var oTotalCost=this.getView().byId("idTotalCostUp");
+            var oCurr=this.getView().byId("idCurrUp");
+            var oPosMin=this.getView().byId("idPosMinUp");
+            var oNumOfDrills=this.getView().byId("idNumOfDrillsUp");
+            var oTypeOfMin=this.getView().byId("idTypeOfMinUp");
+            var oProbOfMin=this.getView().byId("idProbOfMinUp");
             //values for all the fields
 
             let sLocId=oLocId.getValue();
@@ -42,7 +42,7 @@ sap.ui.define([
             let sProbOfMin=oProbOfMin.getValue();
 
             let payload={
-                "LocId":sLocId,
+                //"LocId":sLocId,
                 "LocDesc":sLocDesc,
                 "MiningResc":sMinResc,
                 "TotalCost":sTotalCost,
@@ -66,17 +66,9 @@ sap.ui.define([
                         onClose:function(){
                             let oRouter=that.getRouter()
                             oRouter.navTo("RouteMiningView")
-                            oLocId.setValue("");
-                            oLocDesc.setValue("");
-                            oMinResc.setValue("");
-                            oTotalCost.setValue("");
-                            oCurr.setValue("");
-                            oPosMin.setValue("");
-                            oNumOfDrills.setValue("");
-                            oTypeOfMin.setValue("");
-                            oProbOfMin.setValue("");
+                        
 
-                        }.bind(that)
+                        }
                     })
                     
                 },

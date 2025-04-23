@@ -8,6 +8,7 @@ sap.ui.define([
         onInit() {
             let oRouter=this.getRouter()
             oRouter.attachRoutePatternMatched(this._onRouteMatched,this)
+            
         },
         _onRouteMatched:function(oEvent){
             this.index=oEvent.getParameter("arguments").indexDetail
