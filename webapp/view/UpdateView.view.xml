@@ -1,0 +1,43 @@
+ <mvc:View controllerName="app.miningdata.controller.UpdateView"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="idUpdatePage" title="{i18n>titleUpdate}">
+        <content>
+            <f:SimpleForm editable="true">
+                <Label text="Location Id" required="true"></Label>
+                <Input value="{MiningModel1>LocId}" enabled="false" id="idLocUp"></Input>
+
+                <Label text="Location Description"></Label>
+                <Input value="{MiningModel1>LocDesc}" id="idLocDescUp"></Input>
+
+                <Label text="Mining Resource Allocation" ></Label>
+                <Input value="{MiningModel1>MiningResc}" id="idMinRescUp"></Input>
+
+                <Label text="Total Cost"></Label>
+                <Input value="{MiningModel1>TotalCost}" id="idTotalCostUp"></Input>
+
+                <Label text="Currency"></Label>
+                <Input value="{MiningModel1>Currency}" id="idCurrUp"></Input>
+
+                <Label text="Possible Mineral"></Label>
+                <Input value="{MiningModel1>PossibleMineral}" id="idPosMinUp"></Input>
+
+                <Label text="Number of Drills"></Label>
+                <Input value="{MiningModel1>NumberOfDrills}" id="idNumOfDrillsUp"></Input>
+
+                <Label text="Type of Mineral" ></Label>
+                <Input value="{MiningModel1>TypeOfMineral}" id="idTypeOfMinUp"></Input>
+
+                <Label text="Probability of Mineral"></Label>
+                <Input value="{MiningModel1>ProbabilityOfOutcome}" id="idProbOfMinUp"></Input>
+
+                <Button text="{i18n>update}" press="onUpdate"></Button>
+                
+            </f:SimpleForm>
+
+
+
+        </content>
+                </Page>
+</mvc:View>

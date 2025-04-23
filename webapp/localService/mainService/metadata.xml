@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z9308_ODATA_MINING_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="MiningTable" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="LocId"/>
+                </Key>
+                <Property Name="LocId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location_id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LocDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="location_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MiningResc" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Mining_ResourceAlloc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalCost" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Total_Cost" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="PossibleMineral" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Possible_Mineral" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NumberOfDrills" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Number_of_Drills" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TypeOfMineral" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Type_of_Mineral" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProbabilityOfOutcome" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Probab_of_Mineral" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="Z9308_ODATA_MINING_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="MiningTableSet" EntityType="Z9308_ODATA_MINING_SRV.MiningTable" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://zin-blr-srv1:8001/sap/opu/odata/sap/Z9308_ODATA_MINING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://zin-blr-srv1:8001/sap/opu/odata/sap/Z9308_ODATA_MINING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
